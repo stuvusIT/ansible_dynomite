@@ -1,0 +1,39 @@
+---
+- name: Clone dynomite repo
+  git:
+    repo: https://github.com/Netflix/dynomite.git
+    dest: /var/src/dynomite
+    version: "{{ dynomite_version }}"
+    depth: 1
+
+- name: Install libssl-dev und dh-autoreconf
+  apt:
+    name:
+      - libssl-dev
+      - dh-autoreconf
+
+- name: Run autoreconf
+  shell: autoreconf -fvi
+  args:
+    chdir: /var/src/dynomite/
+
+- name: Run configure
+  shell: ./configure --enable-debug=yes
+  args:
+    chdir: /var/src/dynomite/
+
+- name: Run make
+  shell: make
+  args:
+    chdir: /var/src/dynomite/
+
+- name: Run make install
+  shell: make install
+  args:
+    chdir: /var/src/dynomite/
+
+- name: Create dynomite folder
+  file:
+    path: /etc/dynomite
+    state: directory
+    mode: 0755
