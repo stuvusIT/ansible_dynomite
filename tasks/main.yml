@@ -10,7 +10,7 @@
 
 - name: Place dynomite config
   copy:
-    content: "{{ dynomite.config | to_nice_yaml }}"
+    content: "{{ dynomite_config | to_nice_yaml }}"
     dest: /etc/dynomite/dynomite.yml
   notify: Restart dynomite
 

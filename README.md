@@ -9,7 +9,7 @@ Debian or Ubuntu with a running redis server.
 
 | Name               | Required/Default   | Description             |
 |:-------------------|:------------------:|:------------------------|
-| `dynomite.config`  | :heavy_check_mark: | Dynomite config as yaml |
+| `dynomite_config`  | :heavy_check_mark: | Dynomite config as yaml |
 | `dynomite_version` | `v0.6.14`          | Dynomite version        |
 
 ## License
