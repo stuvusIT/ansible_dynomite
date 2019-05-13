@@ -1,0 +1,21 @@
+---
+galaxy_info:
+  author: Fritz Otlinghaus
+  description: dynomite
+  company: stuvus (https://stuvus.uni-stuttgart.de)
+
+  license: CC-BY-SA
+
+  min_ansible_version: 2.2
+
+  platforms:
+    - name: Debian
+      versions:
+        - stretch
+
+  galaxy_tags:
+    - redis
+    - database
+    - dynomite
+
+dependencies: []
