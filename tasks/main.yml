@@ -2,6 +2,7 @@
 - name: Get dynomite version
   shell: dynomite -V
   ignore_errors: true
+  changed_when: false
   register: dynomite_exist
 
 - name: Install dynomite
